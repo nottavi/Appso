@@ -1,0 +1,47 @@
+<ul>
+    <li {%  if current == "/1/2/" %}class="active"{%  endif %}><a href="{{ path( ezpublish.rootLocation ) }}">Accueil</a></li>
+    {% for item in locationList %}
+        <li class="parent {%  if item.pathString in current %}active{% endif %}" id="nav-location-{{ item.id }}"><a href="{{ path( item ) }}">{{ item.contentInfo.name }}</a>
+        {{ render( controller( "ADAppsoBundle:Appso:subMenu", { 'top': item.id, 'current': 65 } ) ) }}
+        </li>
+    {% endfor %}
+
+    {# <li class="parent">
+        <a href="article.html">Mesures générales</a>
+        <ul>
+            <li><a href="article.html">Responsabilités</a></li>
+            <li><a href="article.html">Démarche qualité</a></li>
+            <li><a href="article.html">Obligation de développement professionnel continu (DPC)</a></li>
+            <li><a href="article.html">Choix du référencement</a></li>
+            <li><a href="article.html">Recours aux technologies</a></li>
+            <li><a href="article.html">Documentation nécessaire</a></li>
+            <li><a href="article.html">Locaux</a></li>
+            <li><a href="article.html">Matériel</a></li>
+            <li><a href="article.html">Affichage des prix</a></li>
+            <li><a href="article.html">Affichage des engagements</a></li>
+            <li><a href="article.html">Affichage en matière de traitement automatisé des données à caractère personnel</a></li>
+            <li><a href="article.html">Quizz - Mesures générales</a></li>
+        </ul>
+    </li>
+    <li class="parent">
+        <a href="article.html">Comportement</a>
+        <ul>
+            <li><a href="article.html">Matériel</a></li>
+            <li><a href="article.html">Affichage des prix</a></li>
+            <li><a href="article.html">Affichage des engagements</a></li>
+            <li><a href="article.html">Affichage en matière de traitement automatisé des données à caractère personnel</a></li>
+            <li><a href="article.html">Quizz - Mesures générales</a></li>
+        </ul>
+    </li>
+    <li class="parent">
+        <a href="article.html">Requêtes patient</a>
+        <ul>
+            <li><a href="article.html">Responsabilités</a></li>
+            <li><a href="article.html">Démarche qualité</a></li>
+            <li><a href="article.html">Obligation de développement professionnel continu (DPC)</a></li>
+            <li><a href="article.html">Choix du référencement</a></li>
+            <li><a href="article.html">Recours aux technologies</a></li>
+            <li><a href="article.html">Documentation nécessaire</a></li>
+        </ul>
+    </li> #}
+</ul>

@@ -1,0 +1,42 @@
+{% extends noLayout ? viewbaseLayout : "ADAppsoBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    {% render(controller("ADAppsoBundle:Appso:slider")) %}
+
+    <section class="content wrap">
+        <div class="third parts">
+            <p class="title">Trois axes pour optimiser l'accueil des patients sans ordonnance :</p>
+
+            <ul>
+                <li>
+                    <a href="article.html">
+                        <img src="{{ asset('bundles/adappso/images/thumbnails/mesures-generales.jpg') }}" alt="Mesures générales">
+                        <span>Mesures générales <span>en amont</span></span>
+                    </a>
+                </li><li>
+                    <a href="article.html">
+                        <img src="{{ asset('bundles/adappso/images/thumbnails/comportement.jpg' )}}" alt="Comportement">
+                        <span>Comportement <span>les clés du dialogue</span></span>
+                    </a>
+                </li><li>
+                    <a href="article.html">
+                        <img src="{{ asset('bundles/adappso/images/thumbnails/requetes-patient.jpg') }}" alt="Requêtes patient">
+                        <span>Requêtes patient</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="third quizz">
+            <ul>
+                <li class="mesures-generales">
+                    <a href="#_">Mesures générales <span>Le Quizz</span></a>
+                </li><li class="comportement">
+                    <a href="#_">Comportement <span>Le Quizz</span></a>
+                </li><li class="requetes-patient">
+                    <a href="#_">Requêtes patient <span>Le Quizz</span></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

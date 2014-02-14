@@ -1,0 +1,5 @@
+<ul>
+{% for item in submenu %}
+    <li class="{% if current == item.id %}active{% endif %}"><a href="{{ path( item ) }}">{{ item.contentInfo.name }}</a></li>
+{%  endfor %}
+</ul>

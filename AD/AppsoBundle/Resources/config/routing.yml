@@ -1,0 +1,11 @@
+ad_appso_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ADAppsoBundle:Default:index }
+
+contact:
+    path: contact
+    defaults: { _controller: ADAppsoBundle:Contact:index }
+
+contact_process:
+    path: ok
+    defaults: { _controller: ADAppsoBundle:Contact:ok }

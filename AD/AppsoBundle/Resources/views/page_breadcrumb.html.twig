@@ -1,0 +1,9 @@
+<div class="breadcrumb">
+    <div class="wrap">
+        <ul>
+            {% for location in path %}
+            <li><a href="{{ path( location ) }}">{{ location.contentInfo.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

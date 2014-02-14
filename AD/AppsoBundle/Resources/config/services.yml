@@ -1,0 +1,7 @@
+parameters:
+#    ad_appso.example.class: AD\AppsoBundle\Example
+
+services:
+#    ad_appso.example:
+#        class: %ad_appso.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

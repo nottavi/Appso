@@ -1,0 +1,14 @@
+{% if sliders|length >0 %}
+<section id="home-slider">
+    <ul class="cf">
+        {% for item in sliders %}
+            <li><a href="{{ item.getFieldValue( 'url' ).text }}"><img src="{{ item.getFieldValue('image').uri }}" border=0 alt="{{ ez_content_name( item ) }}"/></a></li>
+        {% endfor %}
+    </ul>
+
+    <div class="slider-nav">
+        <span class="prev">Précédent</span>
+        <span class="next">Suivant</span>
+    </div>
+</section>
+{% endif %}

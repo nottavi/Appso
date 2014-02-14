@@ -1,0 +1,9 @@
+{# TODO: add loading external CSS files defined in the INI settings #}
+{% stylesheets
+'@ADAppsoBundle/Resources/public/css/normalize.css'
+'@ADAppsoBundle/Resources/public/css/jquery.fancybox.css'
+'@ADAppsoBundle/Resources/public/css/main.css'
+%}
+
+<link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+{% endstylesheets %}

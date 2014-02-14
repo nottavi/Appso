@@ -1,0 +1,43 @@
+{% extends noLayout ? viewbaseLayout : "ADAppsoBundle::pagelayout.html.twig" %}
+{% block title %}{{ content.contentInfo.name }}{% endblock %}
+{% block content %}
+
+
+
+    <section class="content wrap cf">
+        <article>
+            <header>
+                <h1>{{ content.contentInfo.name }}</h1>
+                <a href="javascript:window.print();" class="print" title="Imprimer">Imprimer</a>
+            </header>
+
+            {{ ez_render_field(
+            content,
+            "image",
+            {
+            'editMode': true,
+            'attr': { 'class': 'illus' }
+            }
+            )
+            }}
+
+
+                {{ ez_render_field(
+                content,
+                "body",
+                {
+                'editMode': true,
+                'attr': { 'class': 'dynamic-content' }
+                }
+                )
+                }}
+
+        </article>
+
+        <aside>
+            {{ render( controller( "ADAppsoBundle:Appso:subMenu", { 'top': location.parentLocationId, 'current': location.id } ) ) }}
+
+            <a href="http://www.agence-differente.fr" class="test fancybox" data-fancybox-type="iframe"><img src="{{ asset('bundles/adappso/images/test.png') }}" alt="Testez-vous sur ce contenu !"></a>
+        </aside>
+    </section>
+{% endblock %}
