@@ -4,30 +4,48 @@
     {% render(controller("ADAppsoBundle:Appso:slider")) %}
 
     <section class="content wrap">
-        <div class="third parts">
+        <div class="third">
             <p class="title">Trois axes pour optimiser l'accueil des patients sans ordonnance :</p>
 
             <ul>
                 <li>
-                    <a href="article.html">
-                        <img src="{{ asset('bundles/adappso/images/thumbnails/mesures-generales.jpg') }}" alt="Mesures générales">
-                        <span>Mesures générales <span>en amont</span></span>
-                    </a>
+                    <div class="page">
+                        <a href="article.html">
+                            <img src="{{ asset('bundles/adappso/images/thumbnails/mesures-generales.jpg') }}" alt="Mesures générales">
+                            <span>Mesures générales <span>en amont</span></span>
+                        </a>
+                    </div>
+
+                    <div class="quizz">
+                        <a href="#_" class="mesures-generales">Mesures générales <span>Le Quizz</span></a>
+                    </div>
                 </li><li>
-                    <a href="article.html">
-                        <img src="{{ asset('bundles/adappso/images/thumbnails/comportement.jpg' )}}" alt="Comportement">
-                        <span>Comportement <span>les clés du dialogue</span></span>
-                    </a>
+                    <div class="page">
+                        <a href="article.html">
+                            <img src="{{ asset('bundles/adappso/images/thumbnails/comportement.jpg') }}" alt="Comportement">
+                            <span>Comportement <span>les clés du dialogue</span></span>
+                        </a>
+                    </div>
+
+                    <div class="quizz">
+                        <a href="#_" class="comportement">Comportement <span>Le Quizz</span></a>
+                    </div>
                 </li><li>
-                    <a href="article.html">
-                        <img src="{{ asset('bundles/adappso/images/thumbnails/requetes-patient.jpg') }}" alt="Requêtes patient">
-                        <span>Requêtes patient</span>
-                    </a>
+                    <div class="page">
+                        <a href="article.html">
+                            <img src="{{ asset('bundles/adappso/images/thumbnails/requetes-patient.jpg') }}" alt="Requêtes patient">
+                            <span>Requêtes patient</span>
+                        </a>
+                    </div>
+
+                    <div class="quizz">
+                        <a href="#_" class="requetes-patient">Requêtes patient <span>Le Quizz</span></a>
+                    </div>
                 </li>
             </ul>
         </div>
 
-        <div class="third quizz">
+        <!-- <div class="third quizz">
             <ul>
                 <li class="mesures-generales">
                     <a href="#_">Mesures générales <span>Le Quizz</span></a>
@@ -37,6 +55,6 @@
                     <a href="#_">Requêtes patient <span>Le Quizz</span></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </section>
 {% endblock %}
